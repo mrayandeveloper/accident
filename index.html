@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Accident & Pothole Alert System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+    
+</head>
+
+<body>
+
+<header>
+    <h1>🚨 Smart Accident & Pothole Alert System</h1>
+    <p>Powered by ESP32-CAM + Sensor Fusion + Telegram + GPS</p>
+    <div style="margin-top: 20px;">
+        <span class="badge">IoT Enabled</span>
+        <span class="badge">Real-time Alerts</span>
+        <span class="badge">AI-Ready</span>
+    </div>
+</header>
+
+<div class="container">
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="card">
+        <p style="font-size: 18px; line-height: 1.8; color: #555;">
+            A <strong>low-cost, high-impact safety device</strong> that detects real accidents using
+            MPU6050 + SW-420 + Ultrasonic Sensor fusion, confirms with a 10-second
+            user cancel window, and then auto-sends alerts via Telegram and SMS 
+            with live GPS location.
+        </p>
+        <p style="margin-top: 15px; font-size: 18px; line-height: 1.8; color: #555;">
+            This system also detects potholes to prevent future accidents and improve road safety.
+        </p>
+    </div>
+    
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-number">10s</div>
+            <div class="stat-label">Cancel Window</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Sensor Fusion</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">GPS</div>
+            <div class="stat-label">Real-time Location</div>
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <h2>Key Features</h2>
+    <div class="flex">
+        <div class="card col">
+            <div class="feature-icon">🚗</div>
+            <h3>Accident Detection</h3>
+            <p>Uses jerk + vibration + angle shift to confirm crash events with high accuracy.</p>
+        </div>
+        <div class="card col">
+            <div class="feature-icon">🕳️</div>
+            <h3>Pothole Detection</h3>
+            <p>Ultrasonic spike + mild acceleration indicates pothole presence.</p>
+        </div>
+        <div class="card col">
+            <div class="feature-icon">📱</div>
+            <h3>Telegram Alerts</h3>
+            <p>Instant message with GPS link and optional camera snapshot.</p>
+        </div>
+        <div class="card col">
+            <div class="feature-icon">⏱️</div>
+            <h3>10-Second Cancel</h3>
+            <p>False alarm protection through a mobile popup window.</p>
+        </div>
+    </div>
+</section>
+
+<section id="components">
+    <h2>Components</h2>
+    <div class="card">
+        <ul style="columns: 2; -webkit-columns: 2; -moz-columns: 2;">
+            <li>📷 ESP32-CAM</li>
+            <li>🎯 MPU6050 (Accel/Gyro)</li>
+            <li>📳 SW-420 Vibration Sensor</li>
+            <li>📡 HC-SR04 / JSN Ultrasonic</li>
+            <li>🛰️ NEO-6M GPS Module</li>
+            <li>💡 LED + Buzzer</li>
+            <li>🔋 5V Power Supply</li>
+            <li>⚡ 1000µF Capacitor</li>
+        </ul>
+    </div>
+</section>
+
+<section id="circuit">
+    <h2>Circuit Diagram</h2>
+    <div class="card">
+        <div style="background: linear-gradient(135deg, #e0e7ff 0%, #cfe2ff 100%); padding: 100px; text-align: center; border-radius: 15px; border: 2px dashed #0055ff;">
+            <p style="font-size: 24px; color: #0055ff; font-weight: 600;">📐 Circuit Diagram</p>
+            <p style="margin-top: 10px; color: #666;">Replace with your actual wiring diagram</p>
+        </div>
+    </div>
+</section>
+
+<section id="demo">
+    <h2>Demo Flow</h2>
+    <div class="card">
+        <ol style="font-size: 17px;">
+            <li>🔌 Device powers on, connects to Wi-Fi</li>
+            <li>👁️ Sensors monitor environment in real-time</li>
+            <li>⚠️ Accident detected → PENDING state</li>
+            <li>📲 10-second cancel window on phone</li>
+            <li>📨 If no cancel → Telegram + SMS alert sent</li>
+            <li>🗺️ Pothole detection shown as notifications + logs</li>
+        </ol>
+    </div>
+</section>
+
+<section id="advantages">
+    <h2>Advantages</h2>
+    <div class="card">
+        <ul style="font-size: 17px;">
+            <li>✅ Low-cost and high impact safety solution</li>
+            <li>✅ False alarms reduced via sensor fusion + user cancel</li>
+            <li>✅ Works worldwide using Telegram + phone SMS</li>
+            <li>✅ Pothole logging provides preventive insights</li>
+            <li>✅ Easy to install and integrate with vehicles</li>
+        </ul>
+    </div>
+</section>
+
+<section id="disadvantages">
+    <h2>Disadvantages</h2>
+    <div class="card">
+        <ul style="font-size: 17px;">
+            <li>⚠️ GPS takes time to lock indoors</li>
+            <li>⚠️ Requires Wi-Fi / hotspot for alerts</li>
+            <li>⚠️ Battery must be stable for accurate sensor readings</li>
+            <li>⚠️ May need calibration for different vehicle types</li>
+        </ul>
+    </div>
+</section>
+
+<section id="future">
+    <h2>Future Scope</h2>
+    <div class="card">
+        <ul style="font-size: 17px;">
+            <li>🤖 AI-based accident severity classification</li>
+            <li>📹 Live video upload to Telegram</li>
+            <li>🗺️ Cloud-based pothole map generation</li>
+            <li>🚑 Integration with emergency medical services</li>
+            <li>📱 Full Android/iOS app with dashboard</li>
+            <li>🌐 Community-driven hazard reporting</li>
+        </ul>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Test the System</h2>
+    <div class="card" style="text-align: center;">
+        <p style="margin-bottom: 20px; font-size: 17px; color: #555;">Click the button below to send a test alert via Telegram</p>
+        <button class="btn" onclick="sendAlert()"><span>📤 Send Telegram Test Alert</span></button>
+        <div id="status"></div>
+    </div>
+</section>
+</div>
+
+<footer>
+    <p style="font-size: 18px; font-weight: 600;">Smart Accident Alert System</p>
+    <p style="margin-top: 10px; opacity: 0.8;">© 2026 Ayan Dutta | Making Roads Safer</p>
+</footer>
+
+<script src="main.js"></script>
+
+
+</body>
+</html>
